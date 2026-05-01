@@ -1,97 +1,99 @@
 # 🚀 Binance Futures Testnet Trading Bot (Python CLI)
 
-A professional Python-based command-line trading bot that connects to the **Binance Futures Testnet**.
+A professional Python-based command-line trading bot that connects to the **Binance Futures Testnet (USDT-M)**.
 
-This project allows users to simulate crypto futures trading by placing and managing orders through a structured CLI interface.
+It allows users to simulate crypto trading by placing and managing futures orders using a simple CLI interface.
 
-It demonstrates **API integration, modular architecture, validation, logging, and error handling** in a real-world trading system setup.
-
----
-
-## 📌 Features
-
-- 📈 Place Market Orders  
-- 📊 Place Limit Orders  
-- 🔁 Buy / Sell Support  
-- 📂 View Open Orders  
-- ❌ Cancel Existing Orders  
-- ✅ Input Validation for Safe Execution  
-- 🪵 Structured Logging of API Requests & Responses  
-- ⚠️ Error Handling for API & Runtime Issues  
-- 🧩 Clean Modular Code Architecture  
+This project demonstrates:
+- Binance API integration
+- CLI-based application design
+- Modular Python structure
+- Error handling & logging
+- Real-world trading simulation (testnet)
 
 ---
 
-## 🛠 Tech Stack
+# 📂 Project Structure
 
-- Python 3.x  
-- python-binance  
-- python-dotenv  
 
----
-
-## 📁 Project Structure
-trading-bot-binance/
+trading_bot/
 │
-├── bot/
-│   ├── __init__.py
-│   ├── client.py
-│   ├── cli.py
-│   ├── validators.py
-│   └── logging_config.py
-│
-├── requirements.txt
-├── .env
-├── .gitignore
-├── bot.log
-└── README.md
+├── cli.py # Main entry point (CLI interface)
+├── bot/ # Core trading logic
+├── .env # API keys (NOT pushed to GitHub)
+├── requirements.txt # Dependencies
+├── bot.log # Logs
+├── output.log
+├── README.md
+
+
 ---
 
-## ⚙️ Installation
+# ⚙️ Setup Instructions
 
-### 1️⃣ Clone the Repository
-
+## 1. Clone Repository
 ```bash
-git clone https://github.com/Niranjana-M/trading-bot-binance.git
-cd trading-bot-binance
-2️⃣ Install Dependencies
+git clone <your-repo-url>
+cd trading_bot
+2. Install Dependencies
 pip install -r requirements.txt
-🔐 Environment Setup
+3. Setup Environment Variables
 
-Create a .env file in the root directory:
+Create a .env file:
 
-API_KEY=your_api_key
-API_SECRET=your_api_secret
+API_KEY=your_binance_testnet_api_key
+API_SECRET=your_binance_testnet_secret_key
 
-⚠️ Use Binance Futures Testnet API keys only (not real funds)
+🚀 How to Run:
 
-🚀 Usage
-📈 Place Market Order
-       python cli.py --action place --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
-📊 Place Limit Order
-       python cli.py --action place --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 100000
-📂 View Open Orders
-       python cli.py --action open --symbol BTCUSDT
+📌 Place MARKET Order
+    python cli.py --action place --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+📌 Place LIMIT Order
+    python cli.py --action place --symbol BTCUSDT --side BUY --type LIMIT --quantity 0.001 --price 75000
+📊 View Open Orders
+    python cli.py --action open --symbol BTCUSDT
 ❌ Cancel Order
-      python cli.py --action cancel --symbol BTCUSDT --orderid 123456789
+    python cli.py --action cancel --symbol BTCUSDT --orderid <ORDER_ID>
 
-📊 Logging
-All API interactions, responses, and errors are stored in:
-       bot.log
+⚠️ Important Notes
 
-⚠️ Disclaimer
+Use Binance Futures Testnet only
+Minimum order notional must be ≥ 50 USDT
+LIMIT orders must follow market price rules
+Keep .env file private (DO NOT upload to GitHub)
 
-==>This project is for educational and testing purposes only.
-==>It uses the Binance Futures Testnet and does not involve real money trading.
+🧠 Features
 
-🔮 Future Improvements
+✔ Market Orders (BUY / SELL)
+✔ Limit Orders
+✔ Order Management
+✔ CLI-based interface
+✔ Error handling
+✔ API logging
+✔ Testnet trading simulation
 
-Stop-Loss / Take-Profit Orders
-Trading Strategy Automation
-Telegram Alerts Integration
-Web Dashboard UI
-Real-Time Market Data Visualization
+📸 Screenshots
+
+Add screenshots of:
+
+Market order execution"C:\Users\mnira\OneDrive\Videos\Pictures\Screenshots\Screenshot (37).png"
+Limit order execution"C:\Users\mnira\OneDrive\Videos\Pictures\Screenshots\Screenshot (38).png"
+Open orders"C:\Users\mnira\OneDrive\Videos\Pictures\Screenshots\Screenshot (39).png"
+Cancel order result
+
+🛠️ Tech Stack
+Python 3
+Binance Futures Testnet API
+CLI (argparse)
+dotenv
+requests
 
 👨‍💻 Author
 Niranjana M
----
+Developed as a Python trading bot project for learning API integration and real-world trading systems.
+
+⭐ Future Improvements
+Web dashboard (Flask / React)
+Auto risk management
+Strategy engine
+Real-time price tracking
