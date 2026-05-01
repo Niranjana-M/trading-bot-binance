@@ -33,33 +33,18 @@ It demonstrates **API integration, modular architecture, validation, logging, an
 ## 📁 Project Structure
 trading-bot-binance/
 │
-├── src/
-│   └── trading_bot/
-│       ├── __init__.py
-│       │
-│       ├── core/
-│       │   ├── client.py              # Binance API connection & requests
-│       │   ├── orders.py              # Order placement & management logic
-│       │
-│       ├── cli/
-│       │   └── cli.py                # Command-line interface
-│       │
-│       ├── utils/
-│       │   ├── validators.py         # Input validation
-│       │   ├── logging_config.py     # Logging setup
-│       │
-│       └── config.py                # Loads environment variables
+├── bot/
+│   ├── __init__.py
+│   ├── client.py
+│   ├── cli.py
+│   ├── validators.py
+│   └── logging_config.py
 │
-├── tests/                            # (Future scope: unit tests)
-│
-├── logs/
-│   └── bot.log                       # Runtime logs
-│
+├── requirements.txt
 ├── .env
 ├── .gitignore
-├── requirements.txt
-├── README.md
-└── main.py                           # Entry point
+├── bot.log
+└── README.md
 ---
 
 ## ⚙️ Installation
