@@ -1,23 +1,24 @@
-# 📈 Binance Futures Trading Bot (Testnet)
+# 🚀 Binance Futures Testnet Trading Bot (Python CLI)
 
-A professional Python-based command-line trading bot that connects to the **Binance Futures Testnet**.  
-It allows users to simulate crypto trading by placing and managing futures orders through a structured CLI interface.
+A professional Python-based command-line trading bot that connects to the **Binance Futures Testnet**.
 
-This project demonstrates API integration, modular design, input validation, and error handling in a real-world trading system setup.
+This project allows users to simulate crypto futures trading by placing and managing orders through a structured CLI interface.
+
+It demonstrates **API integration, modular architecture, validation, logging, and error handling** in a real-world trading system setup.
 
 ---
 
-## 🚀 Features
+## 📌 Features
 
-- Place Market Orders  
-- Place Limit Orders  
-- Supports BUY / SELL trades  
-- View Open Orders  
-- Cancel existing orders  
-- Input validation for safe execution  
-- Structured logging of API requests and responses  
-- Error handling for API and runtime issues  
-- Clean modular code architecture  
+- 📈 Place Market Orders  
+- 📊 Place Limit Orders  
+- 🔁 Buy / Sell Support  
+- 📂 View Open Orders  
+- ❌ Cancel Existing Orders  
+- ✅ Input Validation for Safe Execution  
+- 🪵 Structured Logging of API Requests & Responses  
+- ⚠️ Error Handling for API & Runtime Issues  
+- 🧩 Clean Modular Code Architecture  
 
 ---
 
@@ -28,9 +29,8 @@ This project demonstrates API integration, modular design, input validation, and
 - python-dotenv  
 
 ---
-##📁 Project Structure
 
-
+## 📁 Project Structure
 trading_bot/
 │
 ├── bot/
@@ -38,27 +38,23 @@ trading_bot/
 │ ├── client.py
 │ ├── validators.py
 │ ├── logging_config.py
+│ └── cli.py
 │
-├── cli.py
 ├── requirements.txt
 ├── .env
 ├── .gitignore
 ├── bot.log
 └── README.md
-
-
 ---
 
 ## ⚙️ Installation
 
-Clone the repository:
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Niranjana-M/trading-bot-binance.git
 cd trading-bot-binance
-
-Install dependencies:
-
+2️⃣ Install Dependencies
 pip install -r requirements.txt
 🔐 Environment Setup
 
@@ -67,36 +63,35 @@ Create a .env file in the root directory:
 API_KEY=your_api_key
 API_SECRET=your_api_secret
 
-⚠️ Use Binance Futures Testnet API keys only
+⚠️ Use Binance Futures Testnet API keys only (not real funds)
 
 🚀 Usage
-Place Market Order
-python cli.py --action place --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
-Place Limit Order
-python cli.py --action place --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 100000
-View Open Orders
-python cli.py --action open --symbol BTCUSDT
-Cancel Order
-python cli.py --action cancel --symbol BTCUSDT --orderid 123456789
+📈 Place Market Order
+       python cli.py --action place --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+📊 Place Limit Order
+       python cli.py --action place --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 100000
+📂 View Open Orders
+       python cli.py --action open --symbol BTCUSDT
+❌ Cancel Order
+      python cli.py --action cancel --symbol BTCUSDT --orderid 123456789
+
 📊 Logging
-
 All API interactions, responses, and errors are stored in:
+       bot.log
 
-bot.log
 ⚠️ Disclaimer
 
-This project is for educational and testing purposes only.
-It uses Binance Futures Testnet and does not involve real trading funds.
+==>This project is for educational and testing purposes only.
+==>It uses the Binance Futures Testnet and does not involve real money trading.
 
-📌 Future Improvements
-Stop-Loss / Take-Profit orders
-Trading strategy automation
-Telegram alerts
-Web dashboard UI
-Real-time market data visualization
+🔮 Future Improvements
+
+Stop-Loss / Take-Profit Orders
+Trading Strategy Automation
+Telegram Alerts Integration
+Web Dashboard UI
+Real-Time Market Data Visualization
 
 👨‍💻 Author
-
 Niranjana M
-
-## 📁 Project Structure
+---
