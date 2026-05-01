@@ -1,35 +1,24 @@
-# Binance Futures Trading Bot
+📈 Binance Futures Trading Bot
 
-A professional Python command-line trading bot developed for Binance Futures Testnet / Demo Trading.  
-This project allows users to place and manage futures orders through a clean CLI interface with proper validation, structured logging, and error handling.
+A professional Python command-line trading bot developed for Binance Futures Testnet / Demo Trading.
 
----
+This project demonstrates API integration, automated order execution, input validation, and structured CLI-based trading system design.
 
-## Features
-
-- Place MARKET orders
-- Place LIMIT orders
-- Supports BUY and SELL
-- View open orders
-- Cancel existing orders
-- Input validation
-- Exception handling
-- API request/response logging
-- Clean modular code structure
-
----
-
-## Tech Stack
-
-- Python 3.x
-- python-binance
-- python-dotenv
-
----
-
-## Project Structure
-
-```text
+✨ Features
+Place MARKET orders
+Place LIMIT orders
+Supports BUY and SELL positions
+View open orders
+Cancel existing orders
+Input validation
+Exception handling
+API request/response logging
+Clean modular architecture
+🛠 Tech Stack
+Python 3.x
+python-binance
+python-dotenv
+📁 Project Structure
 trading_bot/
 │── bot/
 │   ├── __init__.py
@@ -41,18 +30,15 @@ trading_bot/
 │── README.md
 │── bot.log
 │── .gitignore
-Installation
-
-Clone or download the project, then install dependencies:
-
+⚙️ Installation
 pip install -r requirements.txt
-Environment Setup
+🔐 Environment Setup
 
-Create a .env file in the root folder:
+Create a .env file:
 
 API_KEY=your_api_key
 API_SECRET=your_api_secret
-Usage
+🚀 Usage
 Place Market Order
 python cli.py --action place --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
 Place Limit Order
@@ -61,56 +47,21 @@ View Open Orders
 python cli.py --action open --symbol BTCUSDT
 Cancel Order
 python cli.py --action cancel --symbol BTCUSDT --orderid 123456789
-Sample Output
-=======================================================
- Binance Futures Demo Trading Bot
-=======================================================
-
-Order Placed Successfully
-----------------------------------------
-Order ID : 13097000111
-Symbol   : BTCUSDT
-Status   : FILLED
-Side     : BUY
-Type     : MARKET
-Qty      : 0.001
-----------------------------------------
-Logging
+📊 Logging
 
 All API requests, responses, and errors are stored in:
 
 bot.log
-Error Handling
-
-The application handles:
-
-Invalid order side (must be BUY / SELL)
-Invalid order type (must be MARKET / LIMIT)
-Missing price for LIMIT orders
-Invalid quantity
-API errors
-Network connection failures
-Assumptions
-Uses Binance Futures Testnet / Demo Trading environment
-LIMIT orders remain open until matched or cancelled
-API credentials are stored securely in .env
-Assignment Coverage
-
-✔ Place Market Orders
-✔ Place Limit Orders
-✔ BUY / SELL Support
-✔ CLI Input
-✔ Validation
-✔ Logging
-✔ Error Handling
-✔ Structured Code
-
-Future Improvements
-Stop-Limit order support
-Take-Profit / Stop-Loss orders
+⚠️ Assumptions
+Uses Binance Futures Testnet (Demo Trading)
+LIMIT orders remain open until executed or cancelled
+API keys are stored securely in .env
+📌 Future Improvements
+Stop-Limit orders
+Take-Profit / Stop-Loss
 Telegram alerts
-Trading strategy automation
+Automated trading strategies
 Web dashboard UI
-Author
+👨‍💻 Author
 
 Niranjana M
